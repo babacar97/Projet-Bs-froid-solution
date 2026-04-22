@@ -316,7 +316,6 @@ site title css
 
 .site-title {
     font-weight: 700;
-    text-transform: capitalize;
     font-size: 50px;
     color: #151735;
     margin-top: 8px;
@@ -862,21 +861,21 @@ header top css
     }
 
     .header-top-left {
-        margin-right: 5px;
+        margin-right: 0px;
     }
 }
 
-@media all and (max-width: 992px) {
+/* @media all and (max-width: 992px) { 
     .header-top {
         margin-top: 80px;
-        /* display: none; */
+         display: none; 
     }
 
     body>header>div.header-top>div>div>div.header-top-left>div>ul {
         display: flex;
-        /*flex-direction: column;*/
+        flex-direction: column;
     }
-}
+}*/
 
 
 
@@ -1354,63 +1353,6 @@ search popup
     transition-delay: 1500ms;
 }
 
-.search-popup form {
-    position: absolute;
-    max-width: 700px;
-    top: 50%;
-    left: 15px;
-    right: 15px;
-    margin: -35px auto 0;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: all 300ms ease;
-}
-
-.search-active .search-popup form {
-    transform: scaleX(1);
-    transition-delay: 1200ms;
-}
-
-.search-popup .form-group {
-    position: relative;
-    margin: 0px;
-    overflow: hidden;
-}
-
-.search-popup .form-group input[type="text"],
-.search-popup .form-group input[type="search"] {
-    position: relative;
-    width: 100%;
-    height: 60px;
-    outline: none;
-    border-radius: 50px;
-    border: none;
-    padding: 0 100px 0 35px;
-    transition: all 500ms ease;
-    text-transform: capitalize;
-}
-
-.search-popup .form-group input[type="submit"],
-.search-popup .form-group button {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    border-radius: 50px;
-    background: #1CB9C8;
-    text-align: center;
-    font-size: 20px;
-    color: #fff !important;
-    height: 50px;
-    width: 50px;
-    border: none;
-    cursor: pointer;
-    transition: all 500ms ease;
-}
-
-.search-popup .form-group input[type="submit"]:hover,
-.search-popup .form-group button:hover {
-    background: #1CB9C8;
-}
 
 .search-popup input::placeholder,
 .search-popup textarea::placeholder {
@@ -2222,13 +2164,14 @@ feature css
 .feature-item {
     padding: 50px 20px;
     position: relative;
-    background: #0D63C6;
+    background: white;
     text-align: center;
     overflow: hidden;
-    /* margin-bottom: 25px; */
-    border-radius: 12px;
+    margin-bottom: 25px;
+    border-radius: 50px;
     transition: all .5s ease-in-out;
     z-index: 1;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
 }
 
 .feature-item::before {
@@ -2236,7 +2179,7 @@ feature css
     position: absolute;
     width: 200px;
     height: 200px;
-    background: #F47801;
+    /* background: ; */
     border-radius: 50%;
     right: -100px;
     top: -100px;
@@ -2245,18 +2188,18 @@ feature css
 
 .feature-icon {
     font-size: 80px;
-    color: #fff;
+    color: #F47801;
     line-height: 1;
     margin-bottom: 15px;
 }
 
 .feature-title {
-    color: #fff;
+    color: #F47801;
     margin-bottom: 10px;
 }
 
 .feature-item p {
-    color: #fff;
+    color: #F47801;
 }
 
 
@@ -2581,7 +2524,7 @@ counter css
 
 .counter-area {
     position: relative;
-    background-image: url(../main/img/img-48.webp);
+    background-image: url(../main/img/trio-ventilateurs.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3878,22 +3821,22 @@ pricing css
     color: white;
 }
 
-/* .pricing-item::before{
-  content: "";
-  position: absolute;
-  background-image: url(../img/shape/02.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  right: -10px;
-  top: -10px;
-  width: 200px;
-  height: 200px;
-  z-index: -1;
-} */
+.pricing-item::before {
+    content: "";
+    position: absolute;
+    background-image: url(../main/img/img-55.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: -10px;
+    top: -10px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+}
 
-/* .pricing-item:hover {
-  transform: translateY(-10px);
-} */
+.pricing-item:hover {
+    transform: translateY(-10px);
+}
 
 .pricing-header {
     position: relative;
@@ -3906,7 +3849,7 @@ pricing css
     line-height: 90px;
     text-align: center;
     border-radius: 50px;
-    background: #1CB9C8;
+    background: var(--color-primary);
     position: relative;
     box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
 }
@@ -3918,7 +3861,7 @@ pricing css
     right: -10px;
     top: -10px;
     bottom: -10px;
-    border: 3px solid #1CB9C8;
+    border: 3px solid var(--color-primary);
     border-radius: 50%;
 }
 
@@ -3936,7 +3879,7 @@ pricing css
 
 .pricing-content h4 {
     margin-bottom: 10px;
-    color: #1CB9C8;
+    color: var(--color-primary);
 }
 
 .pricing-amount {
@@ -3965,7 +3908,7 @@ pricing css
     position: absolute;
     width: 13px;
     height: 13px;
-    border: 3px solid #1CB9C8;
+    border: 3px solid var(--color-primary);
     border-radius: 50px;
     left: 0;
     top: 8px;
